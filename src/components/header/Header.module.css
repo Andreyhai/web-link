@@ -1,0 +1,81 @@
+/* src/styles/Header.module.css */
+.header {
+    background-color: #333; /* Темно-серый */
+    color: #FFD700; /* Желтый */
+    padding: 1rem 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img {
+    max-height: 70px;
+  }
+  
+  .nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav li {
+    margin-left: 2rem;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: #FFD700;
+    font-weight: bold;
+  }
+
+  .login-button {
+    font-size: large;
+    background: #FFD700;
+    border-radius: 5px;
+    padding: 5px 15px;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out; 
+    overflow: hidden; 
+    width: fit-content;
+  }
+  
+  .login-button:hover {
+    transform: translateY(-3px); 
+  }
+  
+  .login-button span {
+    display: inline-block; 
+    white-space: nowrap; 
+    border-right: 2px solid #333;
+    width: fit-content; 
+  }
+  
+  .login-button span.animate { /* Добавили класс для анимации */
+    animation: typing 1s steps(4, end) forwards; 
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @media (max-width: 768px) {
+    .nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav li {
+      margin-left: 0;
+      margin-bottom: 1rem;
+    }
+  }
